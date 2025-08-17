@@ -11,10 +11,19 @@ export default function useFormInput(initialValue) {
 
     }
 
+    const resetValue=()=>{
+        setValue('')
+    }
+
 
     return{
-        value,
-        onChange:onChangeHandler
+        inputProps:{
+            value,
+            onChange:onChangeHandler
+        },
+        
+        resetValue
+        
     };
     
 }
